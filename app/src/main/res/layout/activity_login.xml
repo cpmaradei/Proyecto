@@ -30,7 +30,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
             android:elevation="2dp"
-            android:background="@color/white"
+            android:background="@drawable/editextrounded"
             android:orientation="horizontal"
             android:padding="10dp">
 
@@ -56,7 +56,7 @@
             android:layout_marginTop="12dp"
             android:elevation="2dp"
             android:orientation="horizontal"
-            android:background="@color/white"
+            android:background="@drawable/editextrounded"
             android:padding="10dp">
 
             <ImageView
