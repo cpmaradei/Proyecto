@@ -7,7 +7,6 @@
     android:layout_height="match_parent"
     android:gravity="center"
     android:orientation="vertical"
-    android:background="#121B2F"
     tools:context=".registrarUser">
 
     <LinearLayout
@@ -31,7 +30,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
             android:elevation="2dp"
-            android:background="@drawable/editextrounded"
+            android:background="@color/white"
             android:orientation="horizontal"
             android:padding="10dp">
 
@@ -57,14 +56,14 @@
             android:layout_marginTop="12dp"
             android:elevation="2dp"
             android:orientation="horizontal"
-            android:background="@drawable/editextrounded"
+            android:background="@color/white"
             android:padding="10dp">
 
             <ImageView
                 android:layout_width="24dp"
                 android:layout_height="24dp"
                 android:layout_gravity="center_vertical"
-                android:src="@drawable/ic_correo" />
+                android:src="@drawable/ic_action_password" />
 
             <EditText
                 android:id="@+id/edt_correo"
@@ -81,7 +80,7 @@
             android:layout_marginTop="12dp"
             android:elevation="2dp"
             android:orientation="horizontal"
-            android:background="@drawable/editextrounded"
+            android:background="@color/white"
             android:padding="10dp">
 
             <ImageView
@@ -95,7 +94,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@android:color/transparent"
-                android:hint="Contraseña"
+                android:hint="Password"
                 android:inputType="textPassword"
                 android:paddingStart="10dp" />
         </LinearLayout>
@@ -105,14 +104,14 @@
             android:layout_marginTop="12dp"
             android:elevation="2dp"
             android:orientation="horizontal"
-            android:background="@drawable/editextrounded"
+            android:background="@color/white"
             android:padding="10dp">
 
             <ImageView
                 android:layout_width="24dp"
                 android:layout_height="24dp"
                 android:layout_gravity="center_vertical"
-                android:src="@drawable/ic_date" />
+                android:src="@drawable/ic_action_password" />
 
             <EditText
                 android:id="@+id/edt_birthday"
@@ -120,21 +119,18 @@
                 android:layout_height="wrap_content"
                 android:background="@android:color/transparent"
                 android:hint="Fecha de nacimiento"
-                android:inputType="date"
+                android:inputType="text|textPhonetic"
                 android:paddingStart="10dp" />
         </LinearLayout>
 
 
         <Button
-            android:id="@+id/btn_registrar"
+            android:id="@+id/btn_Login"
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:layout_marginTop="24dp"
-            android:layout_marginLeft="80dp"
-            android:layout_marginRight="80dp"
-            android:background="@drawable/editextrounded"
+            android:background="@color/marvel_gold"
             android:text="Sign in"
-            android:textSize="20dp"
             android:textColor="@color/white"
             android:textStyle="bold" />
 
