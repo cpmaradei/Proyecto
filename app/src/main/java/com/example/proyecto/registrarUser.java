@@ -1,5 +1,6 @@
 package com.example.proyecto;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.os.Bundle;
@@ -21,6 +22,7 @@ public class registrarUser extends AppCompatActivity {
     SharedPreferences.Editor editor;
 
 
+    @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
