@@ -4,7 +4,7 @@
     <solid android:color="#FFFFFF" /> <!-- Color de fondo del EditText -->
     <stroke
         android:width="2dp"
-        android:color="#FF6200EE" /> <!-- Color y ancho del borde -->
+        android:color="#434243" /> <!-- Color y ancho del borde -->
     <corners android:radius="16dp" /> <!-- Radio para redondear los bordes -->
     <padding
         android:left="10dp"

@@ -20,7 +20,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="24dp"
-            android:text="Sign in to your account"
+            android:text="Log in to your account"
             android:textColor="#777777"
             android:textSize="16sp" />
 
@@ -81,19 +81,26 @@
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:layout_marginTop="24dp"
-            android:background="@color/marvel_gold"
-            android:text="Sign in"
+            android:layout_marginLeft="80dp"
+            android:layout_marginRight="80dp"
+            android:background="@drawable/editextrounded"
+            android:text="Log in"
             android:textColor="@color/white"
+            android:textSize="20dp"
             android:textStyle="bold" />
-
-        <TextView
-            android:id="@+id/tvRegistrarse"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="24dp"
-            android:text="Don't have an account? Create"
+        <Button
+            android:id="@+id/btn_regi"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="10dp"
+            android:background="@android:color/transparent"
+            android:text="Don't have an account? Log in"
             android:textColor="#5B5A5A"
-            android:textSize="14sp" />
+            android:textSize="15sp"
+            />
+
+
+
 
 
 
