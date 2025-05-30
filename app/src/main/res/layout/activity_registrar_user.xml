@@ -20,7 +20,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="24dp"
-            android:text="Sign in to your account"
+            android:text="Create account"
             android:textColor="#777777"
             android:textSize="16sp" />
 
@@ -130,7 +130,7 @@
             android:layout_height="50dp"
             android:layout_marginTop="24dp"
             android:background="@color/marvel_gold"
-            android:text="Sign in"
+            android:text="Continue"
             android:textColor="@color/white"
             android:textStyle="bold" />
 
