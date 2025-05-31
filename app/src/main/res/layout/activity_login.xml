@@ -83,13 +83,14 @@
             android:layout_marginTop="24dp"
             android:layout_marginLeft="80dp"
             android:layout_marginRight="80dp"
-            android:background="@drawable/editextrounded"
+            android:background="@drawable/bg_marvel"
             android:text="Log in"
             android:textColor="@color/white"
             android:textSize="20dp"
             android:textStyle="bold" />
+
         <Button
-            android:id="@+id/btn_regi"
+            android:id="@+id/btn_regis"
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:layout_marginTop="10dp"
@@ -98,11 +99,6 @@
             android:textColor="#5B5A5A"
             android:textSize="15sp"
             />
-
-
-
-
-
 
     </LinearLayout>
 
