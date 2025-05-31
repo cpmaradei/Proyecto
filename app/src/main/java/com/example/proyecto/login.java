@@ -18,7 +18,7 @@ import androidx.core.view.WindowInsetsCompat;
 public class login extends AppCompatActivity {
 
     EditText edt_Usuario, edt_contraseña;
-    Button btn_Login;
+    Button btn_Login, btn_regi;
     private static final String dataUserCache = "dataUser";
     private static final String KEY_USERNAME = "username";
     private static final String KEY_PASSWORD = "password";
@@ -34,6 +34,7 @@ public class login extends AppCompatActivity {
         edt_Usuario = findViewById(R.id.edt_Usuario);
         edt_contraseña = findViewById(R.id.edt_contraseña);
         btn_Login = findViewById(R.id.btn_Login);
+        btn_regi = findViewById(R.id.btn_regi);
         
         sharedPreferences = getSharedPreferences(dataUserCache,modo_private);
         editor = sharedPreferences.edit();
@@ -57,7 +58,7 @@ public class login extends AppCompatActivity {
 
                     if (usuarioExiste(user, pws)) {
 
-                        Intent intent = new Intent(login.this, HomeActivity.class);
+                        Intent intent = new Intent(login.this, HomeFragment.class);
                         startActivity(intent);
                         finish();
                     } else {
@@ -82,7 +83,21 @@ public class login extends AppCompatActivity {
                 return user.equals(savedUser) && pws.equals(savedPws);
             }
         });
+        btn_regi.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                procesarRegi();
+
+            }
+            private void procesarRegi() {
+                Intent intent = new Intent(login.this, registrarUser.class);
+                startActivity(intent);
+                finish();
+            }
+
+        });
     }
+
 
 
 }
