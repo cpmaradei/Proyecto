@@ -41,11 +41,11 @@
                 android:src="@drawable/ic_action_user" />
 
             <EditText
-                android:id="@+id/edt_Nombre"
+                android:id="@+id/edt_Usuario"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@android:color/transparent"
-                android:hint="Nombre"
+                android:hint="Usuario"
                 android:paddingStart="10dp" />
         </LinearLayout>
 
