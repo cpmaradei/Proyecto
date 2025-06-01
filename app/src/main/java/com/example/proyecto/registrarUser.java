@@ -1,5 +1,6 @@
 package com.example.proyecto;
 
+import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -23,7 +24,7 @@ public class registrarUser extends AppCompatActivity {
 
     EditText edt_Usuario, edt_correo, edt_contraseña, edt_birthday;
     private Button btn_registrar;
-
+    @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -39,7 +40,6 @@ public class registrarUser extends AppCompatActivity {
         btn_registrar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                // Obtener datos de los campos
                 final String email = edt_correo.getText().toString().trim();
                 final String username = edt_Usuario.getText().toString().trim();
                 final String password = edt_contraseña.getText().toString().trim();
