@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     android:gravity="center"
     android:orientation="vertical"
-    android:background="@drawable/login"
+    android:background="@drawable/fondo2"
     tools:context=".login">
     <LinearLayout
         android:layout_width="match_parent"
@@ -19,9 +19,15 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="24dp"
+            android:layout_marginBottom="10dp"
             android:text="Log in to your account"
-            android:textColor="#777777"
+            android:textStyle="bold"
+            android:textColor="#FFFF"
+            android:background="#80000000"
+            android:shadowColor="@color/black"
+            android:shadowRadius="2.2"
+            android:shadowDx="2"
+            android:shadowDy="2"
             android:textSize="16sp" />
 
 
@@ -83,7 +89,7 @@
             android:layout_marginTop="24dp"
             android:layout_marginLeft="80dp"
             android:layout_marginRight="80dp"
-            android:background="@drawable/bg_marvel"
+            android:background="@drawable/editextrounded"
             android:text="Log in"
             android:textColor="@color/white"
             android:textSize="20dp"
@@ -95,8 +101,10 @@
             android:layout_height="50dp"
             android:layout_marginTop="10dp"
             android:background="@android:color/transparent"
-            android:text="Don't have an account? Log in"
-            android:textColor="#5B5A5A"
+            android:text="Don't have an account? Sign in"
+            android:textCursorDrawable="@color/white"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
             android:textSize="15sp"
             />
 

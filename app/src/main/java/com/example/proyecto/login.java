@@ -35,8 +35,8 @@ public class login extends AppCompatActivity {
         edt_contraseña = findViewById(R.id.edt_contraseña);
         btn_Login = findViewById(R.id.btn_Login);
         btn_regis = findViewById(R.id.btn_regis);
-        
-        sharedPreferences = getSharedPreferences(dataUserCache,modo_private);
+
+        sharedPreferences = getSharedPreferences(dataUserCache, modo_private);
         editor = sharedPreferences.edit();
 
 
@@ -76,21 +76,18 @@ public class login extends AppCompatActivity {
                 return user.equals(savedUser) && pws.equals(savedPws);
             }
         });
+
         btn_regis.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                procesarRegis();
-
-            }
-            private void procesarRegis() {
                 Intent intent = new Intent(login.this, registrarUser.class);
                 startActivity(intent);
-                finish();
             }
-
         });
     }
-
-
-
 }
+
+
+
+
+

@@ -7,23 +7,29 @@
     android:layout_height="match_parent"
     android:gravity="center"
     android:orientation="vertical"
+    android:background="@drawable/login"
     tools:context=".registrarUser">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="105dp"
+        android:text="Sign in"
+        android:shadowColor="#FF000000"
+        android:shadowDx="2"
+        android:shadowDy="2"
+        android:shadowRadius="5"
+        android:textColor="@color/white"
+        android:textSize="30sp" />
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center_horizontal"
         android:orientation="vertical"
+        android:layout_marginStart="5dp"
+        android:layout_marginEnd="5dp"
         android:padding="24dp">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="24dp"
-            android:text="Sign in to your account"
-            android:textColor="#777777"
-            android:textSize="16sp" />
-
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -129,7 +135,7 @@
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:layout_marginTop="24dp"
-            android:background="@color/marvel_gold"
+            android:background="@drawable/editextrounded"
             android:text="Sign in"
             android:textColor="@color/white"
             android:textStyle="bold" />

@@ -15,8 +15,7 @@
         android:theme="@style/Theme.Proyecto"
         tools:targetApi="31">
         <activity
-            android:name=".registrarUser"
-            android:exported="false" />
+            android:name=".registrarUser"/>
         <activity
             android:name=".login"
             android:exported="true">
