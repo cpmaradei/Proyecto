@@ -4,7 +4,6 @@
     <style name="BotonSinFondoMorado" parent="Widget.Material3.Button">
         <item name="backgroundTint">@null</item>
         <item name="rippleColor">@android:color/transparent</item>
-        <!-- Opcional para consistencia -->
     </style>
 
 </resources>

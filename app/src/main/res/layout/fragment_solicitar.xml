@@ -10,12 +10,22 @@
     tools:context=".solicitarFragment">
 
     <LinearLayout
-        android:layout_marginTop="250dp"
+        android:layout_marginTop="104dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center_vertical"
         android:orientation="vertical"
         android:padding="24dp">
+
+        <TextView
+            android:layout_width="160dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:text="DESCUBRE UNA NUEVA SUPER HISTORIA"
+            android:textColor="@color/white"
+            android:textSize="28sp"
+            android:textStyle="bold" />
+
 
         <TextView
             android:layout_width="wrap_content"
@@ -43,15 +53,13 @@
 
 
         <Button
-            android:id="@+id/btn_solicitar"
+            android:id="@+id/btn_seleccionar"
             style="@style/BotonSinFondoMorado"
-            android:layout_width="match_parent"
+            android:layout_width="160dp"
             android:layout_height="50dp"
-            android:layout_marginLeft="10dp"
-            android:layout_marginTop="24dp"
-            android:layout_marginRight="180dp"
-            android:background="@drawable/bg_marvel"
-            android:text="Solicitar"
+            android:layout_marginTop="18dp"
+            android:background="@drawable/bg_marvel2"
+            android:text="Seleccionar"
             android:textColor="@color/white"
             android:textSize="20dp"
             android:textStyle="bold" />
@@ -64,7 +72,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="190dp"
-        android:background=""
+        android:background="@color/white"
         app:menu="@menu/menu_navigation" />
 
 
