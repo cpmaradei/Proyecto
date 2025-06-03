@@ -19,15 +19,9 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="10dp"
+            android:layout_marginBottom="24dp"
             android:text="Log in to your account"
-            android:textStyle="bold"
-            android:textColor="#FFFF"
-            android:background="#80000000"
-            android:shadowColor="@color/black"
-            android:shadowRadius="2.2"
-            android:shadowDx="2"
-            android:shadowDy="2"
+            android:textColor="#777777"
             android:textSize="16sp" />
 
 
@@ -84,12 +78,13 @@
 
         <Button
             android:id="@+id/btn_Login"
+            style="@style/BotonSinFondoMorado"
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:layout_marginTop="24dp"
             android:layout_marginLeft="80dp"
             android:layout_marginRight="80dp"
-            android:background="@drawable/editextrounded"
+            android:background="@drawable/bg_marvel"
             android:text="Log in"
             android:textColor="@color/white"
             android:textSize="20dp"
@@ -101,10 +96,8 @@
             android:layout_height="50dp"
             android:layout_marginTop="10dp"
             android:background="@android:color/transparent"
-            android:text="Don't have an account? Sign in"
-            android:textCursorDrawable="@color/white"
-            android:textColor="#FFFFFF"
-            android:textStyle="bold"
+            android:text="Don't have an account? Log in"
+            android:textColor="#5B5A5A"
             android:textSize="15sp"
             />
 
