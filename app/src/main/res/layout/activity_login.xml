@@ -21,7 +21,8 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="24dp"
             android:text="Log in to your account"
-            android:textColor="#777777"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
             android:textSize="16sp" />
 
 
@@ -97,7 +98,8 @@
             android:layout_marginTop="10dp"
             android:background="@android:color/transparent"
             android:text="Don't have an account? Log in"
-            android:textColor="#5B5A5A"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
             android:textSize="15sp"
             />
 
