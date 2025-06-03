@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     android:gravity="center_horizontal"
     android:orientation="vertical"
-    android:background="@drawable/fondo7"
+    android:background="@drawable/fondo11"
     tools:context=".settingsFragment">
 
 
@@ -13,7 +13,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Configuración"
+        android:text="CONFIGURACION"
         android:textSize="28sp"
         android:textColor="@color/white"
         android:layout_marginTop="80dp"
@@ -24,7 +24,7 @@
         android:id="@+id/txt_usuario"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginRight="10dp"
+        android:layout_marginStart="20dp"
         android:text="Usuario: "
         android:textStyle="bold"
         android:textColor="@color/white"
@@ -37,6 +37,7 @@
         android:textStyle="bold"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"
         android:text="Correo: "
@@ -49,6 +50,7 @@
         android:textStyle="bold"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
         android:text="Fecha de nacimiento: "
         android:layout_marginRight="10dp"
         android:layout_marginLeft="10dp"
@@ -62,10 +64,10 @@
         android:layout_height="50dp"
         android:text="Cerrar sesión"
         style="@style/BotonSinFondoMorado"
-        android:textSize="18sp"
+        android:textSize="22sp"
         android:textStyle="bold"
         android:layout_marginTop="50dp"
-        android:background="@drawable/bg_marvel"
+        android:background="@drawable/bg_marvel4"
         android:textColor="@color/white" />
 
 
