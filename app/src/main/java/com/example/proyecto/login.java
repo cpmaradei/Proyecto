@@ -50,7 +50,7 @@ public class login extends AppCompatActivity {
                 String user = edt_Usuario.getText().toString();
                 String pws = edt_contraseña.getText().toString();
 
-                if (!user.isEmpty() || !pws.isEmpty()) {
+                if (!user.isEmpty() && !pws.isEmpty()) {
 
                     editor.putString("user", user);
                     editor.putString("password", pws);

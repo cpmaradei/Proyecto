@@ -1,14 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/fondo3"
     tools:context=".HomeFragment">
 
-
-    <TextView
+    <EditText
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_height="48dp"
+        android:gravity="center"
+        android:hint="Buscar superheroe..."
+        android:textColorHint="@color/white"
 
-</FrameLayout>
+        android:layout_margin="15dp"
+        android:drawableStart="@drawable/ic_buscar"/>
+
+    <Button
+        style="@style/BotonSinFondoMorado"
+        android:layout_width="140dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/bg_marvel"
+        android:text="BUSCAR"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:layout_gravity="center_horizontal"
+        />
+
+
+</LinearLayout>

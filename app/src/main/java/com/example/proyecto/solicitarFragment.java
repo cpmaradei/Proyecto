@@ -62,8 +62,8 @@ public class solicitarFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_solicitar, container, false);
-        btn_seleccionar.findViewById(R.id.btn_seleccionar);
-        Opciones.findViewById(R.id.spinner_comics);
+        btn_seleccionar = view.findViewById(R.id.btn_seleccionar);
+        Opciones = view.findViewById(R.id.spinner_comics);
 
         String[] opciones = {"Avengers", "Xmen", "Spiderman", "Fantastic Four"};
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(getContext(),
