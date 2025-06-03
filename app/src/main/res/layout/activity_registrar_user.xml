@@ -14,7 +14,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="105dp"
-        android:text="Sign in"
+        android:text="Crear cuenta"
         android:shadowColor="#FF000000"
         android:shadowDx="2"
         android:shadowDy="2"
@@ -100,7 +100,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@android:color/transparent"
-                android:hint="Password"
+                android:hint="Contraseña"
                 android:inputType="textPassword"
                 android:paddingStart="10dp" />
         </LinearLayout>
@@ -137,7 +137,7 @@
             android:layout_height="50dp"
             android:layout_marginTop="24dp"
             android:background="@drawable/bg_marvel"
-            android:text="Sign in"
+            android:text="Guardar"
             android:textSize="20sp"
             android:textColor="@color/white"
             android:textStyle="bold" />

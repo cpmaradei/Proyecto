@@ -43,8 +43,8 @@ public class registrarUser extends AppCompatActivity {
                 final String email = edt_correo.getText().toString().trim();
                 final String username = edt_Usuario.getText().toString().trim();
                 final String password = edt_contraseña.getText().toString().trim();
-                final String birthdate = edt_birthday.getText().toString().trim(); // Espera formato ISO yyyy-MM-dd
-                // Validaciones básicas (puedes agregar más si quieres)
+                final String birthdate = edt_birthday.getText().toString().trim();
+                // Validaciones básicas
                 if (email.isEmpty() || username.isEmpty() || password.isEmpty() || birthdate.isEmpty()) {
                     Toast.makeText(registrarUser.this, "Por favor llena todos los campos", Toast.LENGTH_SHORT).show();
                     return;
@@ -91,9 +91,9 @@ public class registrarUser extends AppCompatActivity {
                                 public void run() {
                                     if (responseCode == HttpURLConnection.HTTP_CREATED) {
                                         Toast.makeText(registrarUser.this, "Registro exitoso", Toast.LENGTH_LONG).show();
-                                        // Aquí puedes limpiar los campos o ir a otra actividad
+
                                     } else {
-                                        // Mostrar mensaje de error recibido del servidor
+
                                         Toast.makeText(registrarUser.this, "Error: " + responseMsg, Toast.LENGTH_LONG).show();
                                     }
                                 }
