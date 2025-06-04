@@ -1,6 +1,7 @@
 package com.example.proyecto;
 
 import android.content.Context;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 
@@ -67,6 +68,20 @@ public class settingsFragment extends Fragment {
         txt_usuario.setText("Usuario: " + usuario);
         txt_correo.setText("Correo: " + correo);
         txt_fecha_nacimiento.setText("Fecha de nacimiento: " + fechaNacimiento);
+
+        btn_cerrar_sesion.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                SharedPreferences.Editor editor = preferences.edit();
+                editor.clear();
+                editor.apply();
+
+                Intent intent = new Intent(getActivity(), login.class);
+                startActivity(intent);
+                getActivity().finish();
+            }
+        });
 
         return view;
     }
