@@ -1,36 +1,41 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:gravity="center"
-    android:orientation="vertical"
-    android:background="@drawable/fondo2"
     tools:context=".login">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/fondo2"/>
+
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center_horizontal"
+        android:layout_height="match_parent"
+        android:background="#A84E4E4E"
         android:orientation="vertical"
+        android:gravity="center"
         android:padding="24dp">
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="24dp"
+            android:layout_marginBottom="20dp"
             android:text="Log in to your account"
             android:textColor="#FFFFFF"
-            android:textStyle="bold"
-            android:textSize="16sp" />
+            android:fontFamily="@font/anton_regular"
+            android:textSize="20sp" />
 
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
-            android:elevation="2dp"
+            android:elevation="20dp"
             android:background="@drawable/editextrounded"
             android:orientation="horizontal"
             android:padding="10dp">
@@ -55,7 +60,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="12dp"
-            android:elevation="2dp"
+            android:elevation="25dp"
             android:orientation="horizontal"
             android:background="@drawable/editextrounded"
             android:padding="10dp">
@@ -88,8 +93,8 @@
             android:background="@drawable/bg_marvel"
             android:text="Log in"
             android:textColor="@color/white"
-            android:textSize="20dp"
-            android:textStyle="bold" />
+            android:textSize="26sp"
+            android:fontFamily="@font/odibee_regular" />
 
         <Button
             android:id="@+id/btn_regis"
@@ -99,10 +104,10 @@
             android:background="@android:color/transparent"
             android:text="Don't have an account? Sign in"
             android:textColor="#FFFFFF"
-            android:textStyle="bold"
+            android:fontFamily="@font/anton_regular"
             android:textSize="15sp"
             />
 
     </LinearLayout>
 
-</LinearLayout>
+</RelativeLayout>

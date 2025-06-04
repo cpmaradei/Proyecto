@@ -1,6 +1,7 @@
 package com.example.proyecto;
 
 import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -18,6 +19,10 @@ import java.io.InputStreamReader;
 import java.io.OutputStream;
 import java.net.HttpURLConnection;
 import java.net.URL;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.Locale;
 
 
 public class registrarUser extends AppCompatActivity {
@@ -31,11 +36,11 @@ public class registrarUser extends AppCompatActivity {
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_registrar_user);
 
-        edt_Usuario.findViewById(R.id.edt_Usuario);
-        edt_correo.findViewById(R.id.edt_correo);
-        edt_contraseña.findViewById(R.id.edt_contraseña);
-        edt_birthday.findViewById(R.id.edt_birthday);
-        btn_registrar.findViewById(R.id.btn_registrar);
+        edt_Usuario = findViewById(R.id.edt_Usuario);
+        edt_correo = findViewById(R.id.edt_correo);
+        edt_contraseña = findViewById(R.id.edt_contraseña);
+        edt_birthday = findViewById(R.id.edt_birthday);
+        btn_registrar = findViewById(R.id.btn_registrar);
 
         btn_registrar.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -45,14 +50,27 @@ public class registrarUser extends AppCompatActivity {
                 String password = edt_contraseña.getText().toString().trim();
                 String birthdate = edt_birthday.getText().toString().trim();
 
-                registrarUsuario(username, email, password, birthdate);
+                SimpleDateFormat formatoFecha = new SimpleDateFormat("yyyy-MM-dd", Locale.getDefault());
+                formatoFecha.setLenient(false);
+
+
+                try {
+                    Date fechaNacimiento = formatoFecha.parse(birthdate);
+                    registrarUsuario(username, email, password, fechaNacimiento); // Enviar la fecha validada
+                } catch (ParseException e) {
+                    Toast.makeText(registrarUser.this, "Fecha inválida. Usa formato YYYY-MM-DD", Toast.LENGTH_SHORT).show();
+                }
+
             }
         });
     }
 
-            private void registrarUsuario(final String username, final String email, final String password, final String birthdate) {
+            private void registrarUsuario(final String username, final String email, final String password, final Date birthdate) {
                 // Validaciones básicas
-                if (email.isEmpty() || username.isEmpty() || password.isEmpty() || birthdate.isEmpty()) {
+                SimpleDateFormat formatoFecha = new SimpleDateFormat("yyyy-MM-dd", Locale.getDefault());
+                String fechaFormateada = formatoFecha.format(birthdate);
+
+                if (email.isEmpty() || username.isEmpty() || password.isEmpty() || birthdate == null) {
                     Toast.makeText(registrarUser.this, "Por favor llena todos los campos", Toast.LENGTH_SHORT).show();
                     return;
                 }
@@ -99,7 +117,10 @@ public class registrarUser extends AppCompatActivity {
                                 @Override
                                 public void run() {
                                     if (responseCode == HttpURLConnection.HTTP_CREATED) {
-                                        registrarUsuario(username, email, password, birthdate);
+                                        Toast.makeText(registrarUser.this, "Registro exitoso. Inicia sesión.", Toast.LENGTH_LONG).show();
+                                        Intent intent = new Intent(registrarUser.this, login.class);
+                                        startActivity(intent);
+                                        finish();
 
                                     } else {
 

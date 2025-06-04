@@ -20,8 +20,9 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="20dp"
             android:text="DESCUBRE UNA NUEVA SUPER HISTORIA"
+            android:fontFamily="@font/anton_regular"
             android:textColor="@color/white"
-            android:textSize="28sp"
+            android:textSize="32sp"
             android:textStyle="bold" />
 
 
@@ -32,7 +33,7 @@
             android:text="Seleccione un comic:"
             android:textColor="@color/white"
             android:textSize="18sp"
-            android:textStyle="bold" />
+            android:fontFamily="@font/anton_regular" />
 
 
         <LinearLayout
@@ -64,8 +65,8 @@
             android:background="@drawable/bg_marvel2"
             android:text="Seleccionar"
             android:textColor="@color/white"
-            android:textSize="20sp"
-            android:textStyle="bold" />
+            android:textSize="27sp"
+            android:fontFamily="@font/odibee_regular" />
 
 
     </LinearLayout>

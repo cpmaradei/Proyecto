@@ -11,7 +11,6 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.proyecto.ProyectoApp.SuperHeroes;
 import com.example.proyecto.R;
-import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -30,7 +29,7 @@ public class HeroesAdaptador extends RecyclerView.Adapter<HeroesAdaptador.ViewHo
     @Override
     public HeroesAdaptador.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_superheroes, parent, false);
-        return null;
+        return new ViewHolder(view);
     }
 
     @Override
@@ -57,7 +56,7 @@ public class HeroesAdaptador extends RecyclerView.Adapter<HeroesAdaptador.ViewHo
         public void bind(SuperHeroes superHero) {
             txt_hero.setText(superHero.getNombre());
             txt_descripcion.setText(superHero.getDescripcion());
-            Picasso.get().load(superHero.getImagen()).into(img_hero);
+
 
         }
     }
