@@ -4,6 +4,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -107,13 +108,14 @@ public class login extends AppCompatActivity {
                                 });
                             } catch (Exception e) {
                                 e.printStackTrace();
+                                Log.e("Registro", "Error en la conexión: " + e.getMessage());
                                 runOnUiThread(new Runnable() {
                                     @Override
                                     public void run() {
                                         Toast.makeText(login.this, "Error en la conexión", Toast.LENGTH_LONG).show();
                                     }
                                 });
-                            }
+                          }
                         }
                     }).start();
                 } else {
