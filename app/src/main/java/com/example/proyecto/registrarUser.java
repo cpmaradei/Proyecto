@@ -31,11 +31,11 @@ public class registrarUser extends AppCompatActivity {
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_registrar_user);
 
-        edt_Usuario.findViewById(R.id.edt_Usuario);
-        edt_correo.findViewById(R.id.edt_correo);
-        edt_contraseña.findViewById(R.id.edt_contraseña);
-        edt_birthday.findViewById(R.id.edt_birthday);
-        btn_registrar.findViewById(R.id.btn_registrar);
+        edt_Usuario = findViewById(R.id.edt_Usuario);
+        edt_correo = findViewById(R.id.edt_correo);
+        edt_contraseña = findViewById(R.id.edt_contraseña);
+        edt_birthday = findViewById(R.id.edt_birthday);
+        btn_registrar = findViewById(R.id.btn_registrar);
 
         btn_registrar.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -99,7 +99,8 @@ public class registrarUser extends AppCompatActivity {
                                 @Override
                                 public void run() {
                                     if (responseCode == HttpURLConnection.HTTP_CREATED) {
-                                        registrarUsuario(username, email, password, birthdate);
+                                        Toast.makeText(registrarUser.this, "Usuario registrado correctamente", Toast.LENGTH_SHORT).show();
+                                        finish();
 
                                     } else {
 
