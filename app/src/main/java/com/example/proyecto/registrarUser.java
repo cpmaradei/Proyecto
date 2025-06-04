@@ -40,21 +40,28 @@ public class registrarUser extends AppCompatActivity {
         btn_registrar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                final String email = edt_correo.getText().toString().trim();
-                final String username = edt_Usuario.getText().toString().trim();
-                final String password = edt_contraseña.getText().toString().trim();
-                final String birthdate = edt_birthday.getText().toString().trim();
+                String username = edt_Usuario.getText().toString().trim();
+                String email = edt_correo.getText().toString().trim();
+                String password = edt_contraseña.getText().toString().trim();
+                String birthdate = edt_birthday.getText().toString().trim();
+
+                registrarUsuario(username, email, password, birthdate);
+            }
+        });
+    }
+
+            private void registrarUsuario(final String username, final String email, final String password, final String birthdate) {
                 // Validaciones básicas
                 if (email.isEmpty() || username.isEmpty() || password.isEmpty() || birthdate.isEmpty()) {
                     Toast.makeText(registrarUser.this, "Por favor llena todos los campos", Toast.LENGTH_SHORT).show();
                     return;
                 }
-                // Ejecutar la petición en un hilo separado
+
                 new Thread(new Runnable() {
                     @Override
                     public void run() {
                         try {
-                            URL url = new URL("http://:3000/register");
+                            URL url = new URL("http://10.0.2.2:3000/register");
                             HttpURLConnection conn = (HttpURLConnection) url.openConnection();
                             conn.setRequestMethod("POST");
                             conn.setRequestProperty("Content-Type", "application/json");
@@ -86,11 +93,13 @@ public class registrarUser extends AppCompatActivity {
                             reader.close();
                             final String responseMsg = response.toString();
 
+
+
                             runOnUiThread(new Runnable() {
                                 @Override
                                 public void run() {
                                     if (responseCode == HttpURLConnection.HTTP_CREATED) {
-                                        Toast.makeText(registrarUser.this, "Registro exitoso", Toast.LENGTH_LONG).show();
+                                        registrarUsuario(username, email, password, birthdate);
 
                                     } else {
 
@@ -111,6 +120,7 @@ public class registrarUser extends AppCompatActivity {
                 }).start();
 
             }
-        });
-    }
-}
+
+        }
+
+

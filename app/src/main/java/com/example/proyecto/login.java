@@ -15,6 +15,15 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
+import org.json.JSONObject;
+
+import java.io.BufferedReader;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.io.OutputStream;
+import java.net.HttpURLConnection;
+import java.net.URL;
+
 public class login extends AppCompatActivity {
 
     EditText edt_Usuario, edt_contraseña;
@@ -43,37 +52,73 @@ public class login extends AppCompatActivity {
         btn_Login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                procesar();
-            }
 
+                procesar();
+
+            }
             private void procesar() {
                 String user = edt_Usuario.getText().toString();
                 String pws = edt_contraseña.getText().toString();
 
                 if (!user.isEmpty() && !pws.isEmpty()) {
+                    new Thread(new Runnable() {
+                        @Override
+                        public void run() {
+                            try {
+                                URL url = new URL("http://10.0.2.2:3000/login");
+                                HttpURLConnection conn = (HttpURLConnection) url.openConnection();
+                                conn.setRequestMethod("POST");
+                                conn.setRequestProperty("Content-Type", "application/json");
+                                conn.setDoOutput(true);
 
-                    editor.putString("user", user);
-                    editor.putString("password", pws);
-                    editor.apply();
+                                JSONObject json = new JSONObject();
+                                json.put("username", user);
+                                json.put("password", pws);
+                                OutputStream os = conn.getOutputStream();
+                                os.write(json.toString().getBytes("UTF-8"));
+                                os.close();
 
-                    if (usuarioExiste(user, pws)) {
-
-                        Intent intent = new Intent(login.this, MainActivity.class);
-                        startActivity(intent);
-                        finish();
-                    }
+                                int responseCode = conn.getResponseCode();
+                                InputStream is;
+                                if (responseCode == HttpURLConnection.HTTP_OK) {
+                                    is = conn.getInputStream();
+                                } else {
+                                    is = conn.getErrorStream();
+                                }
+                                BufferedReader reader = new BufferedReader(new InputStreamReader(is));
+                                StringBuilder response = new StringBuilder();
+                                String line;
+                                while ((line = reader.readLine()) != null) {
+                                    response.append(line);
+                                }
+                                reader.close();
+                                final String responseMsg = response.toString();
+                                runOnUiThread(new Runnable() {
+                                    @Override
+                                    public void run() {
+                                        if (responseCode == HttpURLConnection.HTTP_OK) {
+                                            Intent intent = new Intent(login.this, MainActivity.class);
+                                            startActivity(intent);
+                                            finish();
+                                        } else {
+                                            Toast.makeText(login.this, "Credenciales incorrectas: " + responseMsg, Toast.LENGTH_LONG).show();
+                                        }
+                                    }
+                                });
+                            } catch (Exception e) {
+                                e.printStackTrace();
+                                runOnUiThread(new Runnable() {
+                                    @Override
+                                    public void run() {
+                                        Toast.makeText(login.this, "Error en la conexión", Toast.LENGTH_LONG).show();
+                                    }
+                                });
+                            }
+                        }
+                    }).start();
                 } else {
                     Toast.makeText(login.this, "Por favor llenar todos los campos", Toast.LENGTH_LONG).show();
                 }
-            }
-
-            private boolean usuarioExiste(String user, String pws) {
-                SharedPreferences prefs = getSharedPreferences("dataUser", MODE_PRIVATE);
-                String savedUser = prefs.getString("user", "");
-                String savedPws = prefs.getString("password", "");
-
-
-                return user.equals(savedUser) && pws.equals(savedPws);
             }
         });
 
@@ -86,8 +131,3 @@ public class login extends AppCompatActivity {
         });
     }
 }
-
-
-
-
-
