@@ -15,6 +15,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="105dp"
         android:text="Crear cuenta"
+        android:textStyle="bold"
         android:shadowColor="#FF000000"
         android:shadowDx="2"
         android:shadowDy="2"

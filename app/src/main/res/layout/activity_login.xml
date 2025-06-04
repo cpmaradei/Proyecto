@@ -97,7 +97,7 @@
             android:layout_height="50dp"
             android:layout_marginTop="10dp"
             android:background="@android:color/transparent"
-            android:text="Don't have an account? Log in"
+            android:text="Don't have an account? Sign in"
             android:textColor="#FFFFFF"
             android:textStyle="bold"
             android:textSize="15sp"

@@ -79,12 +79,10 @@ public class solicitarFragment extends Fragment {
 
             private void solicitar() {
                 String seleccion = Opciones.getSelectedItem().toString();
-                if (seleccion.isEmpty()) { // Asegúrate de que esta opción esté en tu array
+                if (seleccion.isEmpty()) {
                     Toast.makeText(getContext(), "Por favor, seleccione un cómic", Toast.LENGTH_SHORT).show();
                 } else {
-                    // Aquí puedes manejar la selección válida
                     Toast.makeText(getContext(), "Has seleccionado: " + seleccion, Toast.LENGTH_SHORT).show();
-                    // Aquí puedes agregar la lógica para lo que deseas hacer con la selección
                 }
 
             }
