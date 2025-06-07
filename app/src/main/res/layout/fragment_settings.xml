@@ -6,21 +6,29 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:gravity="center_horizontal"
     android:orientation="vertical"
-    android:background="@drawable/fondo14"
+    android:background="@drawable/bg_marvel4"
     android:scaleX="1.03"
+
+
+
     android:scaleY="1.03"
 
     tools:context=".settingsFragment">
 
     <LinearLayout
         android:layout_width="370dp"
-        android:layout_height="match_parent"
+        android:layout_height="500dp"
         android:orientation="vertical"
         android:gravity="center"
-        android:background="#A000"
-        android:layout_marginTop="10dp"
-        android:elevation="20dp"
+        android:background="#0a1424"
+        android:layout_marginTop="20dp"
+        android:elevation="60dp"
         >
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/usuario"
+            />
 
         <TextView
             android:layout_width="wrap_content"
@@ -37,13 +45,13 @@
             android:gravity="center_vertical"
             android:paddingStart="9dp"
             android:layout_width="match_parent"
-            android:layout_height="30dp"
+            android:layout_height="45dp"
             android:layout_marginLeft="10dp"
             android:layout_marginTop="30dp"
             android:layout_marginRight="10dp"
             android:text="USUARIO: "
             android:textColor="@color/white"
-            android:background="@drawable/bg_marvel2"
+            android:background="@drawable/editextrounded"
             android:textSize="18sp"
             android:textStyle="bold" />
 
@@ -52,14 +60,14 @@
             android:gravity="center_vertical"
             android:paddingStart="9dp"
             android:layout_width="match_parent"
-            android:layout_height="30dp"
+            android:layout_height="45dp"
             android:layout_marginLeft="10dp"
             android:layout_marginTop="16dp"
             android:layout_marginRight="10dp"
             android:text="CORREO: "
             android:textColor="@color/white"
             android:textSize="18sp"
-            android:background="@drawable/bg_marvel2"
+            android:background="@drawable/editextrounded"
             android:textStyle="bold" />
 
         <TextView
@@ -67,12 +75,12 @@
             android:gravity="center_vertical"
             android:paddingStart="9dp"
             android:layout_width="match_parent"
-            android:layout_height="30dp"
+            android:layout_height="45dp"
             android:layout_marginLeft="10dp"
             android:layout_marginTop="16dp"
             android:layout_marginRight="10dp"
             android:text="FECHA DE NACIMIENTO: "
-            android:background="@drawable/bg_marvel2"
+            android:background="@drawable/editextrounded"
             android:textColor="@color/white"
             android:textSize="18sp"
             android:textStyle="bold" />
@@ -82,7 +90,9 @@
             style="@style/BotonSinFondoMorado"
             android:layout_width="200dp"
             android:layout_height="50dp"
-            android:layout_marginTop="40dp"
+            android:layout_marginTop="30dp"
+            android:layout_gravity="left"
+            android:layout_marginStart="10dp"
             android:background="@drawable/bg_marvel2"
             android:text="Cerrar sesión"
             android:textColor="@color/white"
@@ -91,5 +101,11 @@
             android:textStyle="bold" />
 
     </LinearLayout>
+
+    <ImageView
+        android:layout_marginTop="40dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/confi2"/>
 
 </LinearLayout>

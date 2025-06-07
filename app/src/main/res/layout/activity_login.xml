@@ -25,10 +25,10 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="20dp"
-            android:text="Log in to your account"
+            android:text="INGRESA A TU CUENTA"
             android:textColor="#FFFFFF"
             android:fontFamily="@font/anton_regular"
-            android:textSize="20sp" />
+            android:textSize="22sp" />
 
 
         <LinearLayout
@@ -44,7 +44,8 @@
                 android:layout_width="24dp"
                 android:layout_height="24dp"
                 android:layout_gravity="center_vertical"
-                android:src="@drawable/ic_action_user" />
+                android:src="@drawable/ic_action_user"
+                />
 
             <EditText
                 android:id="@+id/edt_Usuario"
@@ -52,6 +53,8 @@
                 android:layout_height="wrap_content"
                 android:background="@android:color/transparent"
                 android:hint="Username"
+                android:textColorHint="@color/white"
+                android:textColor="@color/white"
                 android:paddingStart="10dp" />
         </LinearLayout>
 
@@ -77,7 +80,9 @@
                 android:layout_height="wrap_content"
                 android:background="@android:color/transparent"
                 android:hint="Password"
+                android:textColorHint="@color/white"
                 android:inputType="textPassword"
+                android:textColor="@color/white"
                 android:paddingStart="10dp" />
         </LinearLayout>
 
