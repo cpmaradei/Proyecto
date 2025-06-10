@@ -104,7 +104,7 @@ public class login extends AppCompatActivity {
                                             SharedPreferences.Editor editor = preferences.edit();
                                             editor.putString("user", userJson.getString("username"));
                                             editor.putString("correo", userJson.getString("email"));
-                                            editor.putString("fechaNacimiento", userJson.getString("fechaFormateada"));
+                                            editor.putString("fechaNacimiento", userJson.getString("birthdate"));
                                             editor.apply();
 
                                             Intent intent = new Intent(login.this, MainActivity.class);
