@@ -89,7 +89,7 @@ public class registrarUser extends AppCompatActivity {
                             json.put("email", email);
                             json.put("username", username);
                             json.put("password", password);
-                            json.put("birthdate", birthdate);
+                            json.put("birthdate", fechaFormateada);
 
                             OutputStream os = conn.getOutputStream();
                             os.write(json.toString().getBytes("UTF-8"));

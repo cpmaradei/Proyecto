@@ -94,16 +94,28 @@ public class login extends AppCompatActivity {
                                 }
                                 reader.close();
                                 final String responseMsg = response.toString();
-                                runOnUiThread(new Runnable() {
-                                    @Override
-                                    public void run() {
+                                runOnUiThread(() -> {
+                                    try {
                                         if (responseCode == HttpURLConnection.HTTP_OK) {
+                                            JSONObject jsonResponse = new JSONObject(responseMsg);
+                                            JSONObject userJson = jsonResponse.getJSONObject("user");
+
+                                            SharedPreferences preferences = getSharedPreferences("dataUser", Context.MODE_PRIVATE);
+                                            SharedPreferences.Editor editor = preferences.edit();
+                                            editor.putString("user", userJson.getString("username"));
+                                            editor.putString("correo", userJson.getString("email"));
+                                            editor.putString("fechaNacimiento", userJson.getString("fechaFormateada"));
+                                            editor.apply();
+
                                             Intent intent = new Intent(login.this, MainActivity.class);
                                             startActivity(intent);
                                             finish();
                                         } else {
                                             Toast.makeText(login.this, "Credenciales incorrectas: " + responseMsg, Toast.LENGTH_LONG).show();
                                         }
+                                    } catch (Exception e) {
+                                        e.printStackTrace();
+                                        Toast.makeText(login.this, "Error procesando la respuesta del servidor", Toast.LENGTH_LONG).show();
                                     }
                                 });
                             } catch (Exception e) {
