@@ -44,6 +44,21 @@
 
         </LinearLayout>
 
+
     </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_ver_detalle"
+        style="@style/BotonSinFondoMorado"
+        android:layout_width="wrap_content"
+        android:layout_height="35dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginLeft="135dp"
+        android:layout_marginTop="60dp"
+        android:background="@drawable/bg_marvel2"
+        android:fontFamily="@font/odibee_regular"
+        android:text="Ver Detalle"
+        android:textColor="@android:color/white"
+        android:textSize="18sp" />
 
 </androidx.cardview.widget.CardView>
