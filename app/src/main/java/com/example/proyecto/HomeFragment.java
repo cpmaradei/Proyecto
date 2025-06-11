@@ -70,6 +70,17 @@ public class HomeFragment extends Fragment {
             }
         });
 
+        btn_ver_detalle = view.findViewById(R.id.btn_ver_detalle);
+        btn_ver_detalle.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getActivity(), detalleheroe.class);
+                startActivity(intent);
+                getActivity().finish();
+            }
+        });
+
+
         cargarSuperHeroes();
 
         return view;
