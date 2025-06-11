@@ -5,5 +5,4 @@
         <item name="backgroundTint">@null</item>
         <item name="rippleColor">@android:color/transparent</item>
     </style>
-
 </resources>

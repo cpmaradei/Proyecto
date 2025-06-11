@@ -1,10 +1,14 @@
 package com.example.proyecto;
 
+import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -29,7 +33,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class HomeFragment extends Fragment {
-    Button btn_ver_detalle;
+    Button btn_ver_detalle, btn_buscar;
+    EditText edt_buscar;
 
     private RecyclerView rcv_Heroes;
     private HeroesAdaptador adapter;
@@ -40,6 +45,7 @@ public class HomeFragment extends Fragment {
     private final String ts = "1";
     private final String url = "https://gateway.marvel.com/v1/public/characters?ts=" + ts + "&apikey=" + publicKey + "&hash=" + hash;
 
+    @SuppressLint("MissingInflatedId")
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
@@ -51,6 +57,18 @@ public class HomeFragment extends Fragment {
         superHeroesList = new ArrayList<>();
         adapter = new HeroesAdaptador(superHeroesList);
         rcv_Heroes.setAdapter(adapter);
+        btn_buscar = view.findViewById(R.id.btn_buscar);
+        edt_buscar = view.findViewById(R.id.edt_buscar);
+
+        btn_ver_detalle = view.findViewById(R.id.btn_ver_detalle);
+        btn_ver_detalle.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getActivity(), detalleheroe.class);
+                startActivity(intent);
+                getActivity().finish();
+            }
+        });
 
         cargarSuperHeroes();
 

@@ -19,8 +19,8 @@
             android:layout_width="160dp"
             android:layout_height="wrap_content"
             android:layout_marginBottom="20dp"
-            android:text="DESCUBRE UNA NUEVA SUPER HISTORIA"
             android:fontFamily="@font/anton_regular"
+            android:text="DESCUBRE UNA NUEVA SUPER HISTORIA"
             android:textColor="@color/white"
             android:textSize="32sp"
             android:textStyle="bold" />
@@ -30,10 +30,10 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="20dp"
+            android:fontFamily="@font/anton_regular"
             android:text="Seleccione un comic:"
             android:textColor="@color/white"
-            android:textSize="18sp"
-            android:fontFamily="@font/anton_regular" />
+            android:textSize="18sp" />
 
 
         <LinearLayout
@@ -47,11 +47,7 @@
                 android:id="@+id/spinner_comics"
                 android:layout_width="150dp"
                 android:layout_height="48dp"
-                android:padding="10dp"
-                android:background="@drawable/spinner_bg"
-
-
-
+                android:backgroundTintMode="src_atop"
                 />
         </LinearLayout>
 
@@ -63,10 +59,10 @@
             android:layout_height="50dp"
             android:layout_marginTop="18dp"
             android:background="@drawable/bg_marvel2"
+            android:fontFamily="@font/odibee_regular"
             android:text="Seleccionar"
             android:textColor="@color/white"
-            android:textSize="27sp"
-            android:fontFamily="@font/odibee_regular" />
+            android:textSize="27sp" />
 
 
     </LinearLayout>
